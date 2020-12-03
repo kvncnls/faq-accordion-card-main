@@ -1,0 +1,77 @@
+/* ############################################## */
+/* Default size is iPhone SE at 320px min-width */
+/* ############################################## */
+
+/*########### iPhone 11 Pro ###########*/
+@mixin _375 {
+  @media screen and (min-width: 375px) {
+    @content;
+  }
+}
+
+/*########### Most Phones ###########*/
+@mixin _400 {
+  @media screen and (min-width: 400px) {
+    @content;
+  }
+}
+
+@mixin _480 {
+  @media screen and (min-width: 480px) {
+    @content;
+  }
+}
+
+/*########### Small Tablets ###########*/
+@mixin _640 {
+  @media screen and (min-width: 640px) {
+    @content;
+  }
+}
+
+/*########### Tablets ###########*/
+@mixin _768 {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+/*########### Laptops ###########*/
+@mixin _1024 {
+  @media screen and (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin _1280 {
+  @media screen and (min-width: 1280px) {
+    @content;
+  }
+}
+
+@mixin _1360 {
+  @media screen and (min-width: 1360px) {
+    @content;
+  }
+}
+
+/*########### Small Monitor ###########*/
+@mixin _1440 {
+  @media screen and (min-width: 1440px) {
+    @content;
+  }
+}
+
+/*########### Medium Monitor ###########*/
+@mixin _1920 {
+  @media screen and (min-width: 1920px) {
+    @content;
+  }
+}
+
+/*########### Large Monitor ###########*/
+@mixin _2560 {
+  @media screen and (min-width: 2560px) {
+    @content;
+  }
+}
