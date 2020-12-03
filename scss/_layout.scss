@@ -40,39 +40,84 @@ li {
   position: relative;
   background: white;
   min-width: 327px;
-  width: 90%;
+  width: 87%;
   max-width: 920px;
   box-shadow: 0px 20px 20px 10px rgba(0, 0, 0, 0.2);
   border-radius: 22px;
   align-items: center;
-  padding: 24px;
+  margin-top: 10vh;
+  padding: 32px 24px;
+  @include _768 {
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 96px 48px;
+    overflow: hidden;
+  }
   @include _1024 {
-    padding: 96px;
+    padding: 70px 96px;
+    width: 100%;
   }
   .graphic {
     position: relative;
     min-width: 327px;
-    height: 200px;
+    height: auto;
     align-items: center;
-    top: -100px;
+    @include _1024 {
+      top: -10%;
+      left: -15%;
+    }
     picture {
-      /* This position is based on
-      the graphic div's width */
-      position: relative;
+      position: absolute;
+      z-index: 1;
+      left: 20px;
+      top: -140px;
+      @include _768 {
+        transform: scale(1.15);
+        left: -9%;
+      }
+      @include _1024 {
+        transform: scale(1);
+        left: -27.5%;
+        top: -147.5px;
+      }
     }
-    picture:nth-child(1) {
-      left: -14px;
+    .mobile-bg {
+      position: absolute;
+      top: -30px;
+      @include _480 {
+        transform: scale(1.1);
+      }
+      @include _768 {
+        transform: scale(1.15);
+        left: 0%;
+      }
+      @include _1024 {
+        display: none;
+      }
     }
-    picture:nth-child(2) {
-      top: -100px;
+    .desktop-bg {
+      display: none;
+      @include _1024 {
+        display: block;
+        position: absolute;
+        top: -520px;
+        left: -180.5%;
+      }
     }
   }
   .accordion {
     align-items: center;
+    justify-content: center;
     max-width: 350px;
+    min-width: 279px;
     header {
-      margin-bottom: 24px;
+      margin-top: 96px;
+      margin-bottom: 32px;
       transition: all 250ms ease-in-out;
+      @include _768 {
+        margin-top: 0;
+      }
       h1 {
         font-size: 32px;
         font-weight: 700;
@@ -110,7 +155,7 @@ li {
         overflow: hidden;
         transition: all 250ms ease-in-out;
         &__content {
-          padding: 16px 1rem 16px 0;
+          padding: 0 1rem 16px 0;
           p {
             line-height: 150%;
           }
