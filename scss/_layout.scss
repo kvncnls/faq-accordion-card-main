@@ -52,17 +52,21 @@ li {
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    padding: 96px 48px;
+    padding: 48px;
+    padding-left: 0%;
   }
   @include _1024 {
-    padding: 70px 96px;
+    padding: 0;
     width: 100%;
-    overflow: hidden;
   }
   .desktop-box {
     display: none;
     @include _1024 {
       display: block;
+      z-index: 5;
+      position: absolute;
+      top: 180px;
+      left: -100px;
     }
   }
   .graphic {
@@ -71,8 +75,8 @@ li {
     min-width: 327px;
     align-items: center;
     @include _1024 {
-      top: -10%;
-      left: -15%;
+      overflow: hidden;
+      height: 100%;
     }
     picture {
       position: relative;
@@ -81,12 +85,13 @@ li {
       top: -110px;
       @include _768 {
         transform: scale(1.15);
-        left: -9%;
+        top: 20%;
+        left: -10px;
       }
       @include _1024 {
         transform: scale(1);
-        left: -27.5%;
-        top: -147.5px;
+        left: -75px;
+        top: 50px;
       }
     }
     .mobile-bg {
@@ -97,7 +102,7 @@ li {
       }
       @include _768 {
         transform: scale(1.15);
-        left: 0%;
+        top: 60%;
       }
       @include _1024 {
         display: none;
@@ -108,18 +113,9 @@ li {
       @include _1024 {
         display: block;
         position: absolute;
-        top: -520px;
-        left: -180.5%;
-      }
-    }
-    .desktop-box {
-      display: none;
-      @include _1024 {
-        display: block;
-        z-index: 5;
-        position: absolute;
-        left: -30%;
-        top: -20px;
+        transform: scale(0.9);
+        left: -520px;
+        top: -310px;
       }
     }
   }
@@ -128,12 +124,16 @@ li {
     justify-content: center;
     max-width: 350px;
     min-width: 279px;
-    margin-top: -48px;
+    @include _1024 {
+      margin: 70px 96px 70px 0;
+    }
     header {
+      margin-top: -48px;
       margin-bottom: 32px;
       transition: all 250ms ease-in-out;
       @include _768 {
         margin-top: 0;
+        margin-right: auto;
       }
       h1 {
         font-size: 32px;
