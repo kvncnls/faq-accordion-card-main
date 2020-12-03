@@ -37,6 +37,7 @@ li {
 }
 
 .card {
+  position: relative;
   background: white;
   width: 327px;
   box-shadow: 0px 20px 20px 10px rgba(0, 0, 0, 0.2);
@@ -46,6 +47,21 @@ li {
   @include _1024 {
     padding: 96px;
   }
+  .graphic {
+    max-width: 100%;
+    picture {
+      /* This position is based on
+      the graphic div's width */
+      position: absolute;
+      right: 14.5%;
+    }
+    picture:nth-child(1) {
+      top: -100px;
+    }
+    picture:nth-child(2) {
+      top: 0%;
+    }
+  }
   .accordion {
     max-width: 350px;
     align-items: center;
@@ -53,7 +69,7 @@ li {
       align-items: flex-start;
     }
     header {
-      margin-top: 138px;
+      margin-top: 120px;
       margin-bottom: 24px;
       h1 {
         font-size: 32px;
@@ -63,7 +79,7 @@ li {
     .accordion-item {
       background: white;
       margin: 1rem 0;
-      border-bottom: 1px solid $dark-grayish-blue;
+      border-bottom: 1px solid $light-grayish-blue;
       transition: all 250ms ease-in-out;
       &__header {
         justify-content: space-between;
@@ -74,13 +90,18 @@ li {
         svg {
           transition: all 250ms ease-in-out;
         }
-        &:hover > p {
-          color: $soft-red;
-          cursor: pointer;
+        @media (hover: hover) {
+          &:hover > p {
+            color: $soft-red;
+            cursor: pointer;
+          }
         }
       }
       &__header.active > svg {
         transform: rotateZ(540deg);
+      }
+      &__header.active > p {
+        font-weight: 700;
       }
       &__body {
         max-height: 0;
