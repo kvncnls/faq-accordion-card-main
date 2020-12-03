@@ -69,15 +69,16 @@ li {
   }
   .accordion {
     align-items: center;
+    max-width: 350px;
     header {
       margin-bottom: 24px;
+      transition: all 250ms ease-in-out;
       h1 {
         font-size: 32px;
         font-weight: 700;
       }
     }
     .accordion-item {
-      width: 90%;
       background: white;
       margin: 1rem 0;
       border-bottom: 1px solid $light-grayish-blue;
