@@ -110,6 +110,10 @@ li {
         transform: scale(1.15);
         top: 60%;
       }
+      @include _900 {
+        transform: scale(1.45);
+        top: 70%;
+      }
       @include _1024 {
         display: none;
       }
