@@ -66,7 +66,7 @@ li {
       z-index: 5;
       position: absolute;
       top: 180px;
-      left: -100px;
+      left: -94px;
     }
   }
   .graphic {
@@ -83,10 +83,16 @@ li {
       z-index: 1;
       left: -10px;
       top: -110px;
+      @include _480 {
+        transform: scale(1.1);
+      }
       @include _768 {
         transform: scale(1.15);
         top: 20%;
         left: -10px;
+      }
+      @include _900 {
+        transform: scale(1.45);
       }
       @include _1024 {
         transform: scale(1);

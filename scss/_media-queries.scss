@@ -36,6 +36,12 @@
   }
 }
 
+@mixin _900 {
+  @media screen and (min-width: 900px) {
+    @content;
+  }
+}
+
 /*########### Laptops ###########*/
 @mixin _1024 {
   @media screen and (min-width: 1024px) {
