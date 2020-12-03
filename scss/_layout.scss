@@ -67,6 +67,20 @@ li {
       position: absolute;
       top: 180px;
       left: -94px;
+      @keyframes upDown {
+        0% {
+          top: 180px;
+        }
+        50% {
+          top: 170px;
+        }
+        100% {
+          top: 180px;
+        }
+      }
+      animation-name: upDown;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
     }
   }
   .graphic {
