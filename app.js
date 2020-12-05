@@ -1,3 +1,5 @@
+console.log("Hi there! Follow me on Twitter @kvncnls. :D");
+
 const accordionItemHeaders = document.querySelectorAll(
   ".accordion-item__header"
 );
