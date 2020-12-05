@@ -180,7 +180,7 @@ li {
           transition: all 250ms ease-in-out;
         }
         @media (hover: hover) {
-          &:hover > p {
+          &:hover {
             color: $soft-red;
             cursor: pointer;
           }
